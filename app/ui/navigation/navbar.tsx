@@ -4,8 +4,8 @@ import Image from 'next/image'
 
 export default function Navbar() {
     return (
-        <div className=' bg-slate-100'>
-            <div className='flex max-w-[1200px] flex-row items-center justify-between gap-20 px-10 mx-auto'>
+        <div className='flex justify-center fixed w-full py-3 z-20'>
+            <div className='flex flex-row items-center justify-between gap-20 w-full max-w-[1000px] bg-white rounded-full px-5 py-2'>
                 <Image
                     src='/logo.png'
                     alt='Logo de Scouting Consultoría y Gestión Deportiva'
@@ -22,7 +22,7 @@ export default function Navbar() {
                     className='hidden md:block h-[60px] w-[128px]'
                 />
 
-                <div className='flex flex-row gap-10 items-center'>
+                <div className='flex flex-row gap-5 items-center'>
                     <NavLinks />
                 </div>
             </div>

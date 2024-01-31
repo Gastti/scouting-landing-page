@@ -1,0 +1,35 @@
+.btn {
+    background-color: #09c732;
+    padding: 0.8rem 2rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all .1s;
+}
+
+.btn.secondary {
+    background-color: #28a5db;
+}
+
+.btn:hover {
+    background-color: #0cd236;
+}
+
+.btn.secondary:hover {
+    background-color: #1eb2f2;
+}
+
+.btn.goto {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-right: 1.6rem;
+    background: rgb(40,165,219);
+    background: linear-gradient(90deg, rgba(40,165,219,1) 23%, rgba(107,203,244,1) 100%);
+    border-radius: 25px;
+}
+
+.btn.goto:hover {
+    background-color: #28aae1;
+    gap: 2.5rem;
+}

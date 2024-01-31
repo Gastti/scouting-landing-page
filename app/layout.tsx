@@ -18,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
+        <div className="hidden md:block mx-auto">
+          <Navbar />
+        </div>
         {children}
       </body>
     </html>
