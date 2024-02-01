@@ -1,6 +1,8 @@
 import SectionTitle from '@/components/sectiontitle/sectiontitle'
 import React from 'react'
 import ServiceCard from './servicecard'
+import Section from '@/components/section/section'
+import Image from 'next/image'
 
 const services = [
     {
@@ -42,12 +44,13 @@ const services = [
 
 export default function Services() {
     return (
-        <div className='flex flex-col items-center w-full min-h-[600px] overflow-hidden relative'>
+        <Section className='relative'>
             <SectionTitle
                 title='Nuestros Servicios'
                 subtitle='Potencia tu rendimiento con'
+                className='z-10'
             />
-            <div className='flex flex-row justify-center gap-5 max-w-[1000px] flex-wrap mt-10'>
+            <div className='flex flex-row justify-center gap-5 max-w-[1000px] flex-wrap mt-10 mx-5 z-10'>
                 {services.map(service => {
                     return (
                         <ServiceCard
@@ -61,6 +64,13 @@ export default function Services() {
                     )
                 })}
             </div>
-        </div>
+            <Image
+                src='/bg_g_1.png'
+                alt='Fondo Degradado'
+                width={1920}
+                height={1080}
+                className='absolute top-0 opacity-50 z-0 w-full h-full object-cover'
+            />
+        </Section>
     )
 }

@@ -1,14 +1,15 @@
 import { Button } from '@/components/button/button';
+import Section from '@/components/section/section';
 import Image from 'next/image'
+import Partners from '../partners/partners';
 
 export default function Header() {
     return (
-        <div className='flex flex-col gap-12 w-full min-h-[600px] overflow-hidden relative'>
-
+        <Section className='min-h-[600px] relative'>
             {/* Titulo y Descripción */}
-            <div className='w-full max-w-[1000px] mx-auto z-10 p-5 mt-28'>
+            <div className='w-full max-w-[1000px] z-10 p-5 md:p-0 md:pt-24'>
                 <div className='flex flex-col gap-5 text-white max-w-[500px]'>
-                    <h1 className='text-[1.5rem] font-medium'>
+                    <h1 className='text-[1.5rem] font-bold bg-gradient-to-r from-[#13cc3b] to-[#28a5db] text-transparent bg-clip-text'>
                         Consultoría y Gestión Deportiva
                     </h1>
                     <h2 className='text-[3rem] font-medium leading-tight'>
@@ -27,14 +28,16 @@ export default function Header() {
                 </div>
             </div>
 
+            <Partners />
+
             {/* Imagen de Fondo */}
             <Image
-                src='/home_bg_extra.png'
+                src='/home_bg_extra_2.png'
                 alt='Fondo de la sección de inicio'
                 width={1920}
                 height={752}
                 className='w-full h-full object-cover absolute z-0 select-none opacity-100'
             />
-        </div>
+        </Section>
     );
 }

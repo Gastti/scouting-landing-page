@@ -1,20 +1,25 @@
+import Link from 'next/link';
 import './button.css'
 import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps {
     children: React.ReactNode;
     variation?: string;
+    className?: string;
+    href?: string;
 }
 
-export function Button({ children, variation, ...rest }: ButtonProps) {
-    const { className } = rest;
+export function Button({ children, variation, className, href = '/' }: ButtonProps) {
+
     return (
-        <button
-            {...rest}
+        <Link
+            href={href}
             className={`btn ${variation} ${className}`}
         >
-            {children}
-            {variation === 'goto' ? <ArrowForwardRoundedIcon /> : null}
-        </button>
+            <>
+                {children}
+                {variation === 'goto' ? <ArrowForwardRoundedIcon /> : null}
+            </>
+        </Link>
     );
 }

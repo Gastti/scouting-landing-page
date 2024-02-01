@@ -1,5 +1,8 @@
 
+'use client'
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const links = [
     { name: 'Inicio', href: '/' },
@@ -10,6 +13,8 @@ const links = [
 ];
 
 export default function NavLinks() {
+    const pathname = usePathname()
+    console.log(pathname)
     return (
         <>
             {links.map((link) => {
@@ -17,7 +22,10 @@ export default function NavLinks() {
                     <Link
                         key={link.name}
                         href={link.href}
-                        className='flex px-6 py-2 grow items-center justify-center rounded-full font-medium hover:bg-opacity-5 hover:bg-black '
+                        className={
+                            `flex px-6 py-2 grow items-center justify-center rounded-full font-medium hover:bg-opacity-5 hover:bg-black 
+                            ${pathname === link.href ? 'font-bold text-[#ffffff] leading-tight bg-gradient-to-r from-[#13cc3b] to-[#28a5db]' : null}`
+                        }
                     >
                         {link.name}
                     </Link>

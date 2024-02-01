@@ -22,14 +22,17 @@
 .btn.goto {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
     padding-right: 1.6rem;
-    background: rgb(40,165,219);
-    background: linear-gradient(90deg, rgba(40,165,219,1) 23%, rgba(107,203,244,1) 100%);
+    background: rgb(19,204,59);
+    background: -moz-linear-gradient(45deg, rgba(19,204,59,1) 0%, rgba(40,165,219,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(19,204,59,1) 0%, rgba(40,165,219,1) 100%);
+    background: linear-gradient(45deg, rgba(19,204,59,1) 0%, rgba(40,165,219,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#13cc3b",endColorstr="#28a5db",GradientType=1);
     border-radius: 25px;
 }
 
 .btn.goto:hover {
     background-color: #28aae1;
-    gap: 2.5rem;
+    gap: 3.5rem;
 }

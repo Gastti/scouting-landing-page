@@ -12,7 +12,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, image, imageAlt, href }: ServiceCardProps) {
     return (
-        <div className='flex flex-col justify-between gap-5 max-w-[300px] border-slate-200 border-[1px] rounded-md p-5'>
+        <div className='service-card flex flex-col justify-between gap-5 max-w-[300px] bg-white border-slate-200 transition-colors duration-200 hover:bg-[#ffffff80] hover:outline outline-2 outline-white select-none rounded-md p-5 shadow-lg shadow-[#00000010]'>
             <div className='flex flex-col gap-5'>
                 <div
                     className='flex justify-center items-center w-[80px] h-[80px] p-2 rounded-full bg-gradient-to-r from-[#13cc3b] to-[#28a5db]'
