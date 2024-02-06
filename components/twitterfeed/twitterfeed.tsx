@@ -7,6 +7,8 @@ interface Tweet {
     text: string;
 }
 
+const bearerToken = 'AAAAAAAAAAAAAAAAAAAAAJUOsQEAAAAA5JM8SQjnzttRwtGj%2B6GynFDy7Q4%3D0IGWJIhs5dAef7tbUqWTW3Nyp84yTMkC41u4DCdlenEvxsFe4Q'
+
 export default function TwitterFeed() {
     const [tweets, setTweets] = useState<Array<Tweet>>([]);
 
@@ -15,7 +17,7 @@ export default function TwitterFeed() {
             try {
                 const response = await axios.get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=Scouting_CyGD&count=5', {
                     headers: {
-                        Authorization: `Bearer jgWHrlHAR4NZk7ovWZjHVHqH5`
+                        Authorization: `Bearer ${bearerToken}`
                     }
                 });
                 setTweets(response.data);
