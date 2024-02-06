@@ -12,7 +12,7 @@ export default function RatingStars({ filled, total, className }: RatingStarsPro
 
     const Star = ({ isFilled }: { isFilled: boolean }) => {
         return (
-            <span>
+            <span className='rating-stars-icons'>
                 {isFilled ? <StarIcon /> : <StarBorderIcon />}
             </span>
         );

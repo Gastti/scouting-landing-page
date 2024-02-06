@@ -10,7 +10,7 @@ export default function Header() {
             <div className='w-full max-w-[1000px] z-10 p-5 md:p-0 md:pt-24'>
                 <div className='flex flex-col gap-5 text-white max-w-[500px]'>
                     <h1 className='text-[1.5rem] font-bold bg-gradient-to-r from-[#13cc3b] to-[#28a5db] text-transparent bg-clip-text'>
-                        Consultoría y Gestión Deportiva
+                        Scouting Consultoría y Gestión Deportiva
                     </h1>
                     <h2 className='text-[3rem] font-medium leading-tight'>
                         Desarrolla Tu Carrera con Nuestra Asesoría Deportiva
