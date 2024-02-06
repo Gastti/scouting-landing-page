@@ -1,3 +1,4 @@
+'use client'
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -12,12 +13,13 @@ export default function TwitterFeed() {
     useEffect(() => {
         const fetchTweets = async () => {
             try {
-                const response = await axios.get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=TU_USUARIO_DE_TWITTER&count=5', {
+                const response = await axios.get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=Scouting_CyGD&count=5', {
                     headers: {
-                        Authorization: `Bearer TUS_CREDENCIALES_DE_API_DE_TWITTER_AQUÍ`
+                        Authorization: `Bearer jgWHrlHAR4NZk7ovWZjHVHqH5`
                     }
                 });
                 setTweets(response.data);
+                console.log(tweets)
             } catch (error) {
                 console.error('Error fetching tweets:', error);
             }

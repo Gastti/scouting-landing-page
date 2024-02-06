@@ -16,6 +16,7 @@ export default function Home() {
       <WhoWeAre />
       <Testimonials />
       <News />
+      <SocialWidgets />
       <Footer />
     </main >
   );
