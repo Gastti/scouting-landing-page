@@ -18,7 +18,7 @@ export function Button({ children, variation, className, href = '/' }: ButtonPro
         >
             <>
                 {children}
-                {variation === 'goto' ? <ArrowForwardRoundedIcon /> : null}
+                {variation === 'goto' ? <ArrowForwardRoundedIcon sx={{fontSize: '1.7rem'}} /> : null}
             </>
         </Link>
     );

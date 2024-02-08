@@ -8,37 +8,37 @@ const services = [
     {
         title: 'Servicios de Consultoría',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/'
+        image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/servicios/consultoria'
     },
     {
         title: 'Formación Profesional',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/'
+        image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/servicios/formacion'
     },
     {
         title: 'Ligas Deportivas',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/'
+        image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/servicios/ligas-deportivas'
     },
     {
         title: 'Organización de Eventos Deportivos',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/'
+        image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/servicios/eventos-deportivos'
     },
     {
         title: 'Asesoramiento a Deportistas',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/'
+        image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/servicios/asesoramiento'
     },
     {
         title: 'Scouting Social',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/'
+        image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/servicios/scouting-social'
     },
     {
         title: 'Organización de Torneos Empresariales',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/'
+        image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/servicios/torneos-empresariales'
     }
 ]
 
@@ -50,7 +50,7 @@ export default function Services() {
                 subtitle='Potencia tu rendimiento con'
                 className='z-10'
             />
-            <div className='flex flex-row justify-center gap-5 max-w-[1000px] flex-wrap mx-5 z-10'>
+            <div className='flex flex-row justify-center gap-5 max-w-[1200px] flex-wrap mx-5 z-10'>
                 {services.map(service => {
                     return (
                         <ServiceCard

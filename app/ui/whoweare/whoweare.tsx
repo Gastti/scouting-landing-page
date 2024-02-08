@@ -6,7 +6,7 @@ import React from 'react'
 export default function WhoWeAre() {
     return (
         <Section className='relative overflow-hidden justify-center min-h-[500px]'>
-            <div className='flex w-full flex-row items-center justify-between max-w-[1000px] px-5 pb-5 z-10 '>
+            <div className='flex w-full flex-row items-center justify-between max-w-[1200px] px-5 pb-5 z-10 '>
                 <div>
                     <div className='flex'>
                         <SectionTitle

@@ -21,7 +21,7 @@ export default function Testimonials() {
                 subtitle='Que dicen nuestros'
                 className='z-10 my-0 mb-10'
             />
-            <div className='flex flex-row flex-wrap gap-5 justify-center w-full max-w-[1000px] px-5 z-10'>
+            <div className='flex flex-row flex-wrap gap-5 justify-center w-full max-w-[1200px] px-5 z-10'>
                 {testimonials.map(testimony => {
                     return (
                         <TestimonyCard
