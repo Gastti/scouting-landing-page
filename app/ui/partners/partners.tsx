@@ -29,7 +29,7 @@ export default function Partners() {
                         <Link
                             key={partner.name}
                             href={partner.href}
-                            className='min-w-[70px] max-w-[70px] transition-all duration-100 hover:scale-125'
+                            className='min-w-[40px] max-w-[70px] transition-all duration-100 hover:scale-125'
                         >
                             <Image
                                 src={partner.image}

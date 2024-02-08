@@ -58,7 +58,7 @@ export default function Page() {
     }, [correctId])
 
     return (
-        <div className="flex flex-col w-full max-w-[1200px] mx-auto items-center">
+        <div className="flex flex-col w-full max-w-[1200px] mx-auto items-center px-5">
             <Image
                 src={activePartner.image}
                 width={150}

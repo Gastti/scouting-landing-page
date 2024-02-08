@@ -124,22 +124,22 @@ export default function Page() {
     }, [correctId])
 
     return (
-        <div className="flex flex-col w-full max-w-[1200px] mx-auto">
+        <div className="flex flex-col w-full max-w-[1200px] mx-auto px-5">
             <div className='mt-[100px] mx-auto my-5'>
                 <h1 className='text-[3.5rem] font-semibold bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text'>
                     {activeService.title}
                 </h1>
             </div>
-            <div className="flex flex-row gap-5">
-                <p className='basis-1 grow text-justify'>
+            <div className="flex flex-row gap-5 flex-wrap">
+                <p className='basis-1 grow text-justify min-w-[350px]'>
                     {activeService.content}
                 </p>
-                <div className='basis-1 grow bg-[#f5f5f5] text-lg flex items-center justify-center'>
+                <div className='basis-1 grow bg-[#f5f5f5] text-lg flex items-center justify-center min-w-[350px]'>
                     Imagen
                 </div>
             </div>
-            <div className='my-5 pt-3 border-t-[1px] border-t-stone-200'>
-                <h2 className='inline-block text-[2rem] mb-5 bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text font-semibold'>
+            <div className='my-5 pt-6 border-t-[1px] border-t-stone-200'>
+                <h2 className='inline-block text-[2rem] mb-2 bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text font-semibold'>
                     Mas Servicios
                     </h2>
                 <div className='flex flex-row gap-2 flex-wrap'>
