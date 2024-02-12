@@ -23,7 +23,7 @@ const partners = [
 export default function Partners() {
     return (
         <div className='flex flex-col gap-5 z-10 max-w-[1200px] w-full p-5 bg-[#ffffff] rounded-md mt-5'>
-            <div className='flex flex-row gap-5 justify-center flex-wrap md:flex-nowrap'>
+            <div className='flex flex-row gap-5 justify-center flex-wrap'>
                 {partners.map((partner) => {
                     return (
                         <Link
@@ -42,11 +42,15 @@ export default function Partners() {
                     )
                 })}
             </div>
-            <div className='text-center mt-2'>
-                Ellos <b className='font-bold bg-gradient-to-r from-[#13cc3b] to-[#28a5db] text-transparent bg-clip-text text-center'>confían en nosotros</b>, conoce nuestras
-                <Button href='/' variation='goto' className='mx-auto mt-5'>
-                    Colaboraciones
-                </Button>
+            <div className='flext flex-col items-center mt-2'>
+                <div className='text-center'>
+                    Ellos <b className='font-bold bg-gradient-to-r from-[#13cc3b] to-[#28a5db] text-transparent bg-clip-text text-center'>confían en nosotros</b>, conoce nuestras
+                </div>
+                <div className='flex justify-center mt-5'>
+                    <Button href='/' variation='goto' className=''>
+                        Colaboraciones
+                    </Button>
+                </div>
             </div>
         </div>
     )

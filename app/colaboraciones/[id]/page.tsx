@@ -64,9 +64,8 @@ export default function Page() {
                 width={150}
                 height={150}
                 alt={activePartner.imageAlt}
-                className='mt-[100px]'
+                className='mt-36'
             />
-
             <h1 className='text-[3rem] font-semibold '>
                 {activePartner.name}
             </h1>

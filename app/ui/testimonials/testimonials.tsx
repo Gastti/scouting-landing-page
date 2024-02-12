@@ -6,10 +6,10 @@ import TestimonyCard from './testimonycard'
 const testimonials = [
     { name: 'Nombre Apellido', occupation: 'Ocupación de Ejemplo', review: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', image: '/testimonials/avatar_ph.png', imageAlt: 'Avatar del Cliente', rating: 3 },
     { name: 'Nombre Apellido', occupation: 'Ocupación de Ejemplo', review: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', image: '/testimonials/avatar_ph.png', imageAlt: 'Avatar del Cliente', rating: 3 },
-    // { name: 'Nombre Apellido', occupation: 'Ocupación de Ejemplo', review: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', image: '/testimonials/avatar_ph.png', imageAlt: 'Avatar del Cliente', rating: 5 },
-    // { name: 'Nombre Apellido', occupation: 'Ocupación de Ejemplo', review: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', image: '/testimonials/avatar_ph.png', imageAlt: 'Avatar del Cliente', rating: 4 },
-    // { name: 'Nombre Apellido', occupation: 'Ocupación de Ejemplo', review: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', image: '/testimonials/avatar_ph.png', imageAlt: 'Avatar del Cliente', rating: 5 },
-    // { name: 'Nombre Apellido', occupation: 'Ocupación de Ejemplo', review: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', image: '/testimonials/avatar_ph.png', imageAlt: 'Avatar del Cliente', rating: 2 },
+    { name: 'Nombre Apellido', occupation: 'Ocupación de Ejemplo', review: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', image: '/testimonials/avatar_ph.png', imageAlt: 'Avatar del Cliente', rating: 5 },
+    { name: 'Nombre Apellido', occupation: 'Ocupación de Ejemplo', review: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', image: '/testimonials/avatar_ph.png', imageAlt: 'Avatar del Cliente', rating: 4 },
+    { name: 'Nombre Apellido', occupation: 'Ocupación de Ejemplo', review: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', image: '/testimonials/avatar_ph.png', imageAlt: 'Avatar del Cliente', rating: 5 },
+    { name: 'Nombre Apellido', occupation: 'Ocupación de Ejemplo', review: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', image: '/testimonials/avatar_ph.png', imageAlt: 'Avatar del Cliente', rating: 2 },
 ]
 
 export default function Testimonials() {

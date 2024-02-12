@@ -4,6 +4,11 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+interface NavLinksProps {
+    isFixed: boolean;
+    isHome: boolean;
+}
+
 const links = [
     { name: 'Inicio', href: '/' },
     { name: 'Consultoria', href: '/consultoria' },
@@ -12,7 +17,7 @@ const links = [
     { name: 'Asesoramiento', href: '/asesoramiento' }
 ];
 
-export default function NavLinks() {
+export default function NavLinks({isFixed, isHome}: NavLinksProps) {
     const pathname = usePathname()
 
     return (
@@ -23,8 +28,8 @@ export default function NavLinks() {
                         key={link.name}
                         href={link.href}
                         className={
-                            `flex px-6 py-2 grow items-center justify-center rounded-full font-medium hover:bg-opacity-5 hover:bg-black 
-                            ${pathname === link.href ? 'font-bold text-[#ffffff] leading-tight bg-gradient-to-r from-[#13cc3b] to-[#28a5db]' : null}`
+                            `flex px-6 py-2 grow items-center justify-center rounded-full font-normal hover:bg-gradient-to-r from-[#13cc3b] to-[#28a5db] hover:text-transparent bg-clip-text
+                            ${isFixed && pathname !== link.href || !isHome && pathname!== link.href ? 'text-black' : !isFixed && pathname !== link.href ? 'text-white' : ''} ${pathname === link.href ? 'font-bold bg-gradient-to-r from-[#13cc3b] to-[#28a5db] text-transparent' : null}`
                         }
                     >
                         {link.name}
