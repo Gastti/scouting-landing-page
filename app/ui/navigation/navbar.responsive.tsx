@@ -1,14 +1,14 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import Image from 'next/image'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import NavLinks from './nav-links';
-import Link from 'next/link';
 
 export default function NavbarResponsive() {
     const [opened, setOpened] = useState(false)
+    const nodeRef = useRef(null);
 
     const handleOpened = () => {
         setOpened(prevState => !prevState)
@@ -30,25 +30,33 @@ export default function NavbarResponsive() {
                     </button>
                 </div>
             </div>
-            <div className={`w-full h-[calc(100dvh-80px)] top-0 left-0 py-5 flex-col justify-between ${opened ? 'flex' : 'hidden'}`} onClick={handleOpened}>
-                <div className='flex flex-col gap-5 items-start'>
-                    <NavLinks className='text-[1.5rem] grow-0' />
+            <CSSTransition
+                nodeRef={nodeRef}
+                in={opened}
+                timeout={200}
+                classNames="my-node"
+                unmountOnExit
+            >
+                <div ref={nodeRef} className={`my-node w-full h-[calc(100dvh-80px)] top-0 left-0 py-5 justify-between flex-col`} onClick={handleOpened}>
+                    <div className='flex flex-col gap-5 items-start'>
+                        <NavLinks className='text-[1.5rem] grow-0' />
+                    </div>
+                    <div className='flex flex-row gap-3 items-center px-6'>
+                        <Image
+                            src='/logo.png'
+                            width={158}
+                            height={191}
+                            alt='Logo Scouting'
+                            className=' h-[60px] w-[50px]'
+                        />
+                        <h3>
+                            <span className='text-[1.5rem] leading-tight bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text font-semibold'>Scouting</span>
+                            <br></br>
+                            <span>Consultoria y Gestion Deportiva</span>
+                        </h3>
+                    </div>
                 </div>
-                <div className='flex flex-row gap-3 items-center px-6'>
-                    <Image
-                        src='/logo.png'
-                        width={158}
-                        height={191}
-                        alt='Logo Scouting'
-                        className=' h-[60px] w-[50px]'
-                    />
-                    <h3>
-                        <span className='text-[1.5rem] leading-tight bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text font-semibold'>Scouting</span>
-                        <br></br>
-                        <span>Consultoria y Gestion Deportiva</span>
-                    </h3>
-                </div>
-            </div>
+            </CSSTransition>
         </div>
     )
 }
