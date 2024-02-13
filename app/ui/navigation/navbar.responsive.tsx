@@ -18,11 +18,11 @@ export default function NavbarResponsive() {
         <div className='w-full fixed bg-white top-0 left-0 border-b-[1px] border-b-stone-200'>
             <div className='flex flex-row justify-between items-center h-[80px] px-5'>
                 <Image
-                    src='/logo.png'
+                    src='/logo-mobile.png'
                     alt='Logo de Scouting Consultoría y Gestión Deportiva'
-                    width={158}
-                    height={191}
-                    className='h-[40px] w-[35px]'
+                    width={124}
+                    height={40}
+                    className='h-[40px] w-[124px]'
                 />
                 <div>
                     <button className='p-2' onClick={handleOpened}>
