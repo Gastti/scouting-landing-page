@@ -1,6 +1,7 @@
 'use client'
-import Image from 'next/image'
 import React, { useState } from 'react'
+import { CSSTransition, SwitchTransition } from 'react-transition-group';
+import Image from 'next/image'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import NavLinks from './nav-links';

@@ -1,6 +1,5 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import { usePathname } from 'next/navigation';
 import NavLinks from './nav-links';
 import Image from 'next/image';
