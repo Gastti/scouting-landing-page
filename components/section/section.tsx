@@ -1,11 +1,12 @@
 interface SectionProps {
     children: React.ReactNode,
-    className?: string
+    className?: string,
+    id?: string
 }
 
-export default function Section({ children, className }: SectionProps) {
+export default function Section({ children, className, id }: SectionProps) {
 
     return (
-        <div className={`flex flex-col items-center w-full px-5 ${className}`}>{children}</div>
+        <div id={id} className={`flex flex-col items-center w-full px-5 ${className}`}>{children}</div>
     )
 }

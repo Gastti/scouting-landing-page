@@ -1,8 +1,9 @@
 'use client'
-import React, { useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation'
-import NavLinks from './nav-links'
-import Image from 'next/image'
+import React, { useState, useEffect } from 'react';
+import { CSSTransition, SwitchTransition } from 'react-transition-group';
+import { usePathname } from 'next/navigation';
+import NavLinks from './nav-links';
+import Image from 'next/image';
 
 export default function Navbar() {
     const [isFixed, setIsFixed] = useState<boolean>(false)
@@ -35,18 +36,10 @@ export default function Navbar() {
                     alt='Logo de Scouting Consultoría y Gestión Deportiva'
                     width={158}
                     height={191}
-                    className='block md:hidden h-[60px] w-[50px]'
+                    className='h-[60px] w-[50px]'
                 />
 
-                <Image
-                    src='/logo.png'
-                    alt='Logo de Scouting Consultoría y Gestión Deportiva'
-                    width={406}
-                    height={191}
-                    className='hidden md:block h-[40px] w-[35px]'
-                />
-
-                <div className='flex flex-row gap-5 items-center'>
+                <div className='flex-row gap-5 items-center flex'>
                     <NavLinks isFixed={isFixed} isHome={isHome}/>
                 </div>
             </div>

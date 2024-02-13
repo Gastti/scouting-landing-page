@@ -44,7 +44,7 @@ const services = [
 
 export default function Services() {
     return (
-        <Section className='relative mb-40'>
+        <Section id="services" className='relative mb-40'>
             <SectionTitle
                 title='Nuestros Servicios'
                 subtitle='Potencia tu rendimiento con'

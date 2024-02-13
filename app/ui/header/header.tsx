@@ -7,7 +7,7 @@ export default function Header() {
     return (
         <Section className='min-h-[600px] relative'>
             {/* Titulo y Descripción */}
-            <div className='w-full max-w-[1200px] z-10 p-5 md:p-0 md:pt-24'>
+            <div className='w-full max-w-[1200px] z-10 md:p-0 md:pt-24 pt-32'>
                 <div className='flex flex-col gap-5 text-white max-w-[500px]'>
                     <h1 className='text-[1.5rem] font-bold bg-gradient-to-r from-[#13cc3b] to-[#28a5db] text-transparent bg-clip-text'>
                         Scouting Consultoría y Gestión Deportiva
@@ -21,8 +21,8 @@ export default function Header() {
 
                     {/* Llamada a la Acción / CTA */}
                     <div className='z-10 flex flex-row gap-2'>
-                        <Button variation='goto' className='text-[1.5rem] py-3 px-5'>
-                            Comenzar
+                        <Button href="#section" variation='goto' className='text-[1.5rem] py-3 px-5'>
+                            Servicios
                         </Button>
                     </div>
                 </div>
