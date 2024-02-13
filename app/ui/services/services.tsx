@@ -50,7 +50,7 @@ export default function Services() {
                 subtitle='Potencia tu rendimiento con'
                 className='z-10'
             />
-            <div className='flex flex-row justify-center gap-5 max-w-[1200px] flex-wrap mx-5 z-10'>
+            <div className='flex flex-row justify-center gap-5 max-w-[1200px] flex-wrap w-full z-10'>
                 {services.map(service => {
                     return (
                         <ServiceCard

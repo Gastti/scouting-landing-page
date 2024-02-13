@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import AddIcon from '@mui/icons-material/Add';
 
 interface Service {
     title: string;
@@ -139,13 +140,19 @@ export default function Page() {
                     Imagen
                 </div>
             </div>
+            <div className='my-5'>
+                <a href='/' className='bg-gradient-to-r from-[#28a5db] to-[#13cc3b] px-6 py-4 text-[1rem] text-white'>
+                    Inscribirse
+                    <AddIcon />
+                </a>
+            </div>
             <div className='my-5 pt-6 border-t-[1px] border-t-stone-200'>
                 <h2 className='inline-block text-[2rem] mb-2 bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text font-semibold'>
                     Mas Servicios
-                    </h2>
+                </h2>
                 <div className='flex flex-row gap-2 flex-wrap'>
                     {services.map((service) => {
-                        if(activeService.title !== service.title) return (
+                        if (activeService.title !== service.title) return (
                             <Link
                                 key={service.title}
                                 href={service.href}
@@ -156,7 +163,7 @@ export default function Page() {
                         )
                     })}
                 </div>
-            </div>
+                div</div>
         </div>
     )
 }
