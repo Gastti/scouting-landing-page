@@ -39,7 +39,7 @@ export default function NavbarResponsive() {
             >
                 <div ref={nodeRef} className={`my-node flex w-full h-[calc(100dvh-80px)] top-0 left-0 py-5 justify-between flex-col`} onClick={handleOpened}>
                     <div className='flex flex-col gap-5 items-start'>
-                        <NavLinks className='text-[1.5rem] grow-0' />
+                        <NavLinks className='text-[1rem] grow-0' />
                     </div>
                     <div className='flex flex-row gap-3 items-center px-6'>
                         <Image
