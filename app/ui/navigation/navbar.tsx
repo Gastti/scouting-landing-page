@@ -42,7 +42,7 @@ export default function Navbar() {
 
                 <div className='flex-row gap-5 items-center flex'>
                     <NavLinks isFixed={isFixed} isHome={isHome} />
-                    L</div>
+                </div>
             </div>
         </div>
     )
