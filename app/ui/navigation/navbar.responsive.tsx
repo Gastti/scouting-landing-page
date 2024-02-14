@@ -17,7 +17,7 @@ export default function NavbarResponsive() {
 
     return (
         <div className='w-full fixed bg-white top-0 left-0 border-b-[1px] border-b-stone-200'>
-            <div className='flex flex-row justify-between items-center h-[80px] px-5'>
+            <div className='flex flex-row justify-between items-center h-[70px] px-5'>
                 <Link href='/'>
                     <Image
                         src='/logo-mobile.png'
@@ -29,7 +29,7 @@ export default function NavbarResponsive() {
                 </Link>
                 <div>
                     <button className='p-2' onClick={handleOpened}>
-                        {!opened ? <MenuIcon sx={{ fontSize: '2.5rem' }} /> : <CloseIcon sx={{ fontSize: '2.5rem' }} />}
+                        {!opened ? <MenuIcon sx={{ fontSize: '2rem' }} /> : <CloseIcon sx={{ fontSize: '2rem' }} />}
                     </button>
                 </div>
             </div>
