@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import NavLinks from './nav-links';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Navbar() {
     const [isFixed, setIsFixed] = useState<boolean>(false)
@@ -30,17 +31,18 @@ export default function Navbar() {
             <div
                 className='flex flex-row items-center justify-between gap-20 w-full max-w-[1200px] text-white rounded-full px-5 py-2'
             >
-                <Image
-                    src='/logo.png'
-                    alt='Logo de Scouting Consultoría y Gestión Deportiva'
-                    width={158}
-                    height={191}
-                    className='h-[60px] w-[50px]'
-                />
+                <Link href='/'>
+                    <Image
+                        src='/logo.png'
+                        alt='Logo de Scouting Consultoría y Gestión Deportiva'
+                        width={158}
+                        height={191}
+                        className='h-[60px] w-[50px]'
+                    /></Link>
 
                 <div className='flex-row gap-5 items-center flex'>
-                    <NavLinks isFixed={isFixed} isHome={isHome}/>
-                </div>
+                    <NavLinks isFixed={isFixed} isHome={isHome} />
+                    L</div>
             </div>
         </div>
     )

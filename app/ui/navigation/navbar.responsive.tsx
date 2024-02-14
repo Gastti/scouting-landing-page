@@ -5,6 +5,7 @@ import Image from 'next/image'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import NavLinks from './nav-links';
+import Link from 'next/link';
 
 export default function NavbarResponsive() {
     const [opened, setOpened] = useState(false)
@@ -17,13 +18,15 @@ export default function NavbarResponsive() {
     return (
         <div className='w-full fixed bg-white top-0 left-0 border-b-[1px] border-b-stone-200'>
             <div className='flex flex-row justify-between items-center h-[80px] px-5'>
-                <Image
-                    src='/logo-mobile.png'
-                    alt='Logo de Scouting Consultoría y Gestión Deportiva'
-                    width={250}
-                    height={81}
-                    className='h-[40px] w-[124px]'
-                />
+                <Link href='/'>
+                    <Image
+                        src='/logo-mobile.png'
+                        alt='Logo de Scouting Consultoría y Gestión Deportiva'
+                        width={250}
+                        height={81}
+                        className='h-[40px] w-[124px]'
+                    />
+                </Link>
                 <div>
                     <button className='p-2' onClick={handleOpened}>
                         {!opened ? <MenuIcon sx={{ fontSize: '2.5rem' }} /> : <CloseIcon sx={{ fontSize: '2.5rem' }} />}
@@ -33,7 +36,7 @@ export default function NavbarResponsive() {
             <CSSTransition
                 nodeRef={nodeRef}
                 in={opened}
-                timeout={200}
+                timeout={300}
                 classNames="my-node"
                 unmountOnExit
             >
@@ -42,13 +45,15 @@ export default function NavbarResponsive() {
                         <NavLinks className='text-[1rem] grow-0' />
                     </div>
                     <div className='flex flex-row gap-3 items-center px-6'>
-                        <Image
-                            src='/logo.png'
-                            width={158}
-                            height={191}
-                            alt='Logo Scouting'
-                            className=' h-[60px] w-[50px]'
-                        />
+                        <Link href='/'>
+                            <Image
+                                src='/logo.png'
+                                width={158}
+                                height={191}
+                                alt='Logo Scouting'
+                                className=' h-[60px] w-[50px]'
+                            />
+                        </Link>
                         <h3>
                             <span className='text-[1.5rem] leading-tight bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text font-semibold'>Scouting</span>
                             <br></br>

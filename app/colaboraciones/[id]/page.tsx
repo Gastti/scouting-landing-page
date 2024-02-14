@@ -58,25 +58,23 @@ export default function Page() {
     }, [correctId])
 
     return (
-        <div className="flex flex-col w-full max-w-[1200px] mx-auto items-center px-5">
+        <div className="flex flex-col w-full max-w-[1200px] mx-auto items-start px-5">
             <Image
                 src={activePartner.image}
                 width={150}
                 height={150}
                 alt={activePartner.imageAlt}
-                className='mt-36'
+                className='mt-36 mx-auto'
             />
-            <h1 className='text-[3rem] font-semibold '>
+            <h1 className='text-[2rem] sm:text-[3rem] font-semibold bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text'>
                 {activePartner.name}
             </h1>
 
             <div className="flex flex-col items-center justify-center gap-5">
                 <p className='text-justify'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.
-
+                    <br></br> <br></br>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.
-
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.
                 </p>
             </div>
             <div className='my-5 pt-3 border-t-[1px] border-t-stone-200 w-full'>
@@ -85,7 +83,7 @@ export default function Page() {
                 </h2>
                 <div className='flex flex-row gap-4 flex-wrap'>
                     {partners.map((partner) => {
-                        if(activePartner.name !== partner.name) return (
+                        if (activePartner.name !== partner.name) return (
                             <Link
                                 key={partner.name}
                                 href={partner.href}

@@ -15,7 +15,7 @@ export default function ServiceCard({ title, description, image, imageAlt, href 
     return (
         <Link
             href={href}
-            className='service-card flex flex-col justify-between gap-5 basis-1 flex-grow bg-white min-w-[200px] md:min-w-[300px] border-slate-200 transition-colors duration-200 hover:bg-[#ffffff80] hover:outline outline-2 outline-white select-none rounded-md p-5 shadow-lg shadow-[#00000010]'
+            className='service-card flex flex-col justify-between items-start gap-5 basis-1 flex-grow bg-white min-w-[200px] md:min-w-[300px] border-slate-200 transition-colors duration-200 hover:bg-[#ffffff80] hover:outline outline-2 outline-white select-none rounded-md p-5 shadow-lg shadow-[#00000010]'
         >
             <div className='flex flex-col gap-5'>
                 <div
@@ -28,15 +28,15 @@ export default function ServiceCard({ title, description, image, imageAlt, href 
                         height={150}
                     />
                 </div>
-                <h3 className='text-[#28a5db] text-[1.8rem] font-bold bg-gradient-to-r from-[#13cc3b] to-[#28a5db] text-transparent bg-clip-text'>{title}</h3>
+                <h3 className='text-[#28a5db] text-[1.5rem] md:text-[1.8rem] font-bold bg-gradient-to-r from-[#13cc3b] to-[#28a5db] text-transparent bg-clip-text'>{title}</h3>
                 {/* Descripcion desactivada hasta su elaboracion. */}
-                {/* <p>{description}</p> */}
+                <p>{description}</p>
             </div>
             <button
-                className='flex flex-row gap-2 font-semibold transition-all duration-100 hover:gap-4 text-[#28a5db]'
+                className='flex flex-row gap-2 font-semibold transition-all duration-100 hover:gap-4 bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text'
             >
                 Leer más
-                <ArrowForwardRoundedIcon />
+                <ArrowForwardRoundedIcon sx={{ color: '#13cc3b' }} />
             </button>
         </Link>
     )
