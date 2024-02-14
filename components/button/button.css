@@ -3,7 +3,6 @@
     padding: 0.8rem 2rem;
     color: #fff;
     font-weight: 500;
-    font-size: 1rem;
     transition: all .1s;
 }
 
@@ -22,7 +21,6 @@
 .btn.goto {
     display: flex;
     align-items: center;
-    font-size: 1.3rem;
     gap: 1rem;
     padding: 1rem 3rem;
     padding-right: 3rem;

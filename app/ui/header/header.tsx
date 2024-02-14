@@ -12,7 +12,7 @@ export default function Header() {
                     <h1 className='text-[1.5rem] font-bold bg-gradient-to-r from-[#13cc3b] to-[#28a5db] text-transparent bg-clip-text'>
                         Scouting Consultoría y Gestión Deportiva
                     </h1>
-                    <h2 className='text-[3rem] font-medium leading-tight'>
+                    <h2 className='text-[2rem] sm:text-[3rem] font-medium leading-tight'>
                         Desarrolla Tu Carrera con Nuestra Asesoría Deportiva
                     </h2>
                     <p className='text-[1rem] opacity-80'>
@@ -21,7 +21,7 @@ export default function Header() {
 
                     {/* Llamada a la Acción / CTA */}
                     <div className='z-10 flex flex-row gap-2'>
-                        <Button href="#section" variation='goto' className='text-[1.5rem] py-3 px-5'>
+                        <Button href="/servicios/consultoria" variation='goto' className='text-[1rem] sm:text-[1.5rem] py-3 px-5'>
                             Servicios
                         </Button>
                     </div>

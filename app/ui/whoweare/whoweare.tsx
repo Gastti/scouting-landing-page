@@ -12,14 +12,14 @@ export default function WhoWeAre() {
                         <SectionTitle
                             title='Quienes Somos'
                             subtitle='Conoce más acerca de'
-                            className='mb-5 mx-auto'
+                            className='mb-5 mx-auto md:mx-0'
                         />
                     </div>
                     <p className='max-w-[600px] text-center md:text-start'>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.
                     </p>
                 </div>
-                <div className='flex-grow'>
+                <div className='flex-grow max-w-[300px] md:max-w-[400px]'>
                     <Image
                         src='/whoweare_logo.png'
                         width={813}
