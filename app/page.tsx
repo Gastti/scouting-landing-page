@@ -1,3 +1,4 @@
+import FinalHook from "./ui/finalhook/finalhook";
 import Header from "./ui/header/header";
 import Services from "./ui/services/services";
 import SocialWidgets from "./ui/socialwidgets/socialwidgets";
@@ -12,6 +13,7 @@ export default function Home() {
       <WhoWeAre />
       <Testimonials />
       <SocialWidgets />
+      <FinalHook />
     </main >
   );
 }

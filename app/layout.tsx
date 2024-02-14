@@ -8,8 +8,8 @@ import NavbarResponsive from "./ui/navigation/navbar.responsive";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Scouting Consultoría y Gestión Deportiva",
-  description: "Breve descripción del sitio web.",
+  title: "Scouting",
+  description: "Consultoría y Gestión Deportiva.",
 };
 
 export default function RootLayout({
