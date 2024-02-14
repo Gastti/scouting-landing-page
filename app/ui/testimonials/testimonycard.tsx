@@ -15,7 +15,7 @@ interface TestimonyCardProps {
 
 export default function TestimonyCard({ name, occupation, review, image, imageAlt, rating, className }: TestimonyCardProps) {
     return (
-        <div className={`${className} flex-col justify-between items-center gap-5 max-w-[400px] border-slate-200 border-[1px] rounded-md p-5 bg-white`}>
+        <div className={`${className} flex-col justify-between items-center gap-5 max-w-[400px] border-slate-200 border-[1px] rounded-md p-5 bg-white h-[270px]`}>
             <p className='italic text-center'>{review}</p>
             <RatingStars filled={rating} total={5} className='mx-auto' />
             <div className='flex flex-row gap-5 items-center border-t-[#dfdfdf] border-t-[1px] pt-5'>
