@@ -20,8 +20,8 @@ export default function NavbarResponsive() {
                 <Image
                     src='/logo-mobile.png'
                     alt='Logo de Scouting Consultoría y Gestión Deportiva'
-                    width={124}
-                    height={40}
+                    width={250}
+                    height={81}
                     className='h-[40px] w-[124px]'
                 />
                 <div>
