@@ -20,6 +20,8 @@ export default function TwitterFeed() {
                 const tweets = data.tweets
                 setTweets(tweets)
             }
+
+            console.log(response)
             setLoading(false)
 
         } catch (error) {
