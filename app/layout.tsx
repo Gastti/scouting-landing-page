@@ -4,7 +4,8 @@ import "./globals.css";
 import Navbar from "./ui/navigation/navbar";
 import Footer from "./ui/footer/footer";
 import NavbarResponsive from "./ui/navigation/navbar.responsive";
-import Providers from "@/context/Provider";
+
+import NextTopLoader from 'nextjs-toploader';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,12 +22,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} h-screen flex flex-col justify-between`}>
-        <Providers>
-          <div className="hidden md:block"><Navbar /></div>
-          <div className="block md:hidden z-20"><NavbarResponsive /></div>
-          {children}
-          <Footer />
-        </Providers>
+        <NextTopLoader
+          height={4}
+          color='#13cc3b'
+        />
+        <div className="hidden md:block"><Navbar /></div>
+        <div className="block md:hidden z-20"><NavbarResponsive /></div>
+        {children}
+        <Footer />
+
       </body>
     </html>
   );
