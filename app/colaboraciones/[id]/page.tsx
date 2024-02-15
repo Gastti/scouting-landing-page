@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import WorkWithUsButton from '@/components/workwithusbutton/workwithusbutton';
 
 interface Partner {
     name: string;
@@ -64,7 +65,7 @@ export default function Page() {
                 width={150}
                 height={150}
                 alt={activePartner.imageAlt}
-                className='mt-36 mx-auto'
+                className='mt-24 mx-auto'
             />
             <h1 className='text-[2rem] sm:text-[3rem] font-semibold bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text'>
                 {activePartner.name}
@@ -76,6 +77,9 @@ export default function Page() {
                     <br></br> <br></br>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.
                 </p>
+            </div>
+            <div className='mt-5'>
+                <WorkWithUsButton />
             </div>
             <div className='my-5 pt-3 border-t-[1px] border-t-stone-200 w-full'>
                 <h2 className='inline-block text-[2rem] mb-5 bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text font-semibold'>
@@ -100,7 +104,7 @@ export default function Page() {
                         )
                     })}
                 </div>
-            </div>
+                Wd</div>
         </div>
     )
 }

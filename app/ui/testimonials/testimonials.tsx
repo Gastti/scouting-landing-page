@@ -16,7 +16,6 @@ const testimonials = [
 
 export default function Testimonials() {
     const [currentTestimonials, setCurrentTestimonials] = useState(0)
-    const testimonialsToShow = testimonials.slice(currentTestimonials, currentTestimonials + 2)
     
     const ref = useRef(0)
     
@@ -39,7 +38,7 @@ export default function Testimonials() {
             <SectionTitle
                 title='Clientes'
                 subtitle='Que dicen nuestros'
-                className='z-10 my-0 mb-10'
+                className='z-10 my-0 mb-10 mt-0'
             />
                     <div className='flex flex-row flex-wrap gap-5 justify-center w-full max-w-[1200px] z-10'>
                         {testimonials.map((testimony, index) => {

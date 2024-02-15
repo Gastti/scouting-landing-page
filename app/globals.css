@@ -10,15 +10,13 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 255, 255, 255;
+  --background: #F8F8F8;
   --background-end-rgb: 255, 255, 255;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background: var(--background);
 }
 
 @layer utilities {
@@ -136,4 +134,23 @@ body {
   to {
     transform: translateX(150%);
   }
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  background: rgb(19, 204, 59);
+  background: -moz-linear-gradient(180deg, rgba(19, 204, 59, 1) 0%, rgba(40, 165, 219, 1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(19, 204, 59, 1) 0%, rgba(40, 165, 219, 1) 100%);
+  background: linear-gradient(180deg, rgba(19, 204, 59, 1) 0%, rgba(40, 165, 219, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#13cc3b", endColorstr="#28a5db", GradientType=1);
+  height: 100%;
+  width: 4px;
+  left: 0;
+  top: 0;
 }

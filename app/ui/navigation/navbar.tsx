@@ -27,7 +27,7 @@ export default function Navbar() {
     }, [pathname])
 
     return (
-        <div className={`flex justify-center w-full z-20 left-0 ${isFixed || !isHome ? 'bg-white fixed border-b-[1px] border-b-stone-200 text-black' : 'absolute'}`}>
+        <div className={`flex justify-center w-full z-20 left-0 ${isFixed || !isHome ? 'bg-white fixed text-black' : 'absolute'}`}>
             <div
                 className='flex flex-row items-center justify-between gap-20 w-full max-w-[1200px] text-white rounded-full px-5 py-2'
             >

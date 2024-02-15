@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import AddIcon from '@mui/icons-material/Add';
 import Image from 'next/image';
+import RegisterButton from '@/components/registerbutton/registerbutton';
 
 interface Service {
     title: string;
@@ -115,7 +116,7 @@ export default function Page() {
 
     return (
         <div className="flex flex-col w-full max-w-[1200px] mx-auto px-5">
-            <div className='mt-36 mx-auto my-5 text-center'>
+            <div className='mt-24 mx-auto my-5 text-center'>
                 <h2 className='text-[1rem] sm:text-[2rem] font-semibold text-center leading-tight'>Scouting</h2>
                 <h1 className='text-[1.5rem] sm:text-[3.5rem] font-semibold leading-tight bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text'>
                     {activeService.title}
@@ -126,14 +127,7 @@ export default function Page() {
                     <p className='text-justify'>
                         {activeService.content}
                     </p>
-                    <a
-                        href='https://docs.google.com/forms/u/0/'
-                        target='_blank'
-                        className='bg-gradient-to-r from-[#28a5db] to-[#13cc3b] px-6 py-4 text-[1rem] text-white flex flex-row items-center justify-center rounded-lg transition-all duration-200 hover:scale-105 max-w-[200px]'
-                    >
-                        Inscribirse
-                        <AddIcon sx={{ marginLeft: '20px' }} />
-                    </a>
+                    <RegisterButton />
                 </div>
                 <div className='min-w-[450px]'>
                     <Image

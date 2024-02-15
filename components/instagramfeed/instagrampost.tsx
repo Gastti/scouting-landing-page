@@ -12,7 +12,7 @@ export default function InstagramPost({ imageWidth, imageHeight, imageUrl, code 
     return (
         <a
             href={`https://instagram.com/p/${code}`}
-            className='aspect-square border-[1px] overflow-hidden'
+            className='aspect-square overflow-hidden'
             target='_blank'
         >
             {/* eslint-disable-next-line @next/next/no-img-element */}

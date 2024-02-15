@@ -16,7 +16,7 @@ export default function NavbarResponsive() {
     }
 
     return (
-        <div className='w-full fixed bg-white top-0 left-0 border-b-[1px] border-b-stone-200'>
+        <div className='w-full fixed bg-white top-0 left-0'>
             <div className='flex flex-row justify-between items-center h-[70px] px-5'>
                 <Link href='/'>
                     <Image

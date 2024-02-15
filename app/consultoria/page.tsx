@@ -1,19 +1,22 @@
-import Image from "next/image";
+import RegisterButton from "@/components/registerbutton/registerbutton";
 
 export default function Consultoria() {
     return (
         <main className="flex flex-col w-full mx-auto max-w-[1200px] px-5 gap-5 relative">
-            <div className="flex flex-col mt-36 items-start z-10">
+            <div className="flex flex-col mt-24 items-start z-10">
                 <h2 className="text-[2rem] font-semibold leading-tight">Scouting</h2>
                 <h1 className="text-[3rem] font-semibold leading-tight bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text inline-block">
                     Consultoria
                 </h1>
             </div>
             <div className="z-10">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.
+                Nos encontramos trabajando en esta página para brindarte un mejor servicio y toda la información que necesitas.
                 <br /><br />
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.
+                Muchas gracias por tu paciencia.
+
+                Atte. <b>El Equipo de Scouting.</b>
             </div>
+            <RegisterButton />
         </main >
     );
 }

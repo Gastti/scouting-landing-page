@@ -22,7 +22,7 @@ const partners = [
 
 export default function Partners() {
     return (
-        <div className='flex flex-col gap-5 z-10 max-w-[1200px] w-full p-5 bg-[#ffffff] rounded-md mt-5'>
+        <div className='flex flex-col gap-5 z-10 max-w-[1200px] w-full p-5 bg-[#f8F8F8] rounded-md mt-5'>
             <div className='flex flex-row gap-5 justify-center flex-wrap'>
                 {partners.map((partner) => {
                     return (
