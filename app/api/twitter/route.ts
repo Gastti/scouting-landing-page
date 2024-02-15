@@ -4,7 +4,9 @@ import { NextResponse } from "next/server";
 import * as path from 'path';
 
 const dataFilePath = path.join(__dirname, 'twitter.json');
-console.log('==========', dataFilePath)
+const RAPIDAPI_TWITTER_KEY = process.env.RAPIDAPI_TWITTER_KEY
+const RAPIDAPI_TWITTER_HOST = process.env.RAPIDAPI_TWITTER_HOST
+
 const options = {
     method: 'GET',
     url: 'https://twitter154.p.rapidapi.com/user/tweets',
@@ -15,8 +17,8 @@ const options = {
         include_pinned: false
     },
     headers: {
-        'X-RapidAPI-Key': '5e86e64775mshd6f172431dd06acp1246bajsn140a99d9ce62',
-        'X-RapidAPI-Host': 'twitter154.p.rapidapi.com'
+        'X-RapidAPI-Key': RAPIDAPI_TWITTER_KEY,
+        'X-RapidAPI-Host': RAPIDAPI_TWITTER_HOST
     }
 };
 

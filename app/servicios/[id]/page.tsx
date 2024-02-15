@@ -117,7 +117,7 @@ export default function Page() {
         <div className="flex flex-col w-full max-w-[1200px] mx-auto px-5">
             <div className='mt-36 mx-auto my-5 text-center'>
                 <h2 className='text-[1rem] sm:text-[2rem] font-semibold text-center leading-tight'>Scouting</h2>
-                <h1 className='text-[2rem] sm:text-[3.5rem] font-semibold leading-tight bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text'>
+                <h1 className='text-[1.5rem] sm:text-[3.5rem] font-semibold leading-tight bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text'>
                     {activeService.title}
                 </h1>
             </div>
