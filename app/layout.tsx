@@ -31,7 +31,6 @@ export default function RootLayout({
         <div className="block md:hidden z-20"><NavbarResponsive /></div>
         {children}
         <Footer />
-
       </body>
     </html>
   );

@@ -16,7 +16,7 @@ export default function InstagramFeed() {
                 const posts = data.posts
                 setPosts(posts)
             }
-
+            
             setLoading(false)
 
         } catch (error) {
@@ -29,8 +29,8 @@ export default function InstagramFeed() {
         fetchPosts()
     }, []);
     return (
-        <div className='grid grid-cols-3 max-w-[1200px] gap-1 md:gap-5'>
-            {posts.map(post => (
+        <div className='grid grid-cols-3 w-full max-w-[1120px] gap-1 md:gap-5'>
+            {/* {posts.map(post => (
                 <InstagramPost
                     key={post.code}
                     imageHeight={post.image.height}
@@ -38,9 +38,28 @@ export default function InstagramFeed() {
                     imageUrl={post.image.url}
                     code={post.code}
                 />
-            ))}
-            {loading && (<></>)}
-            {!loading && posts.length == 0 && <></>}
+            ))} */}
+            {loading && (<>
+                <div className="col-span-1 aspect-square">
+                    <div className="instagram-post-skeleton h-full bg-gray-200 flex items-center justify-center"></div>
+                </div>
+                <div className="col-span-1 aspect-square">
+                    <div className="instagram-post-skeleton h-full bg-gray-200 flex items-center justify-center"></div>
+                </div>
+                <div className="col-span-1 aspect-square">
+                    <div className="instagram-post-skeleton h-full bg-gray-200 flex items-center justify-center"></div>
+                </div>
+                <div className="col-span-1 aspect-square">
+                    <div className="instagram-post-skeleton h-full bg-gray-200 flex items-center justify-center"></div>
+                </div>
+                <div className="col-span-1 aspect-square">
+                    <div className="instagram-post-skeleton h-full bg-gray-200 flex items-center justify-center"></div>
+                </div>
+                <div className="col-span-1 aspect-square">
+                    <div className="instagram-post-skeleton h-full bg-gray-200 flex items-center justify-center"></div>
+                </div>
+            </>)}
+            {!loading && posts.length == 0 && 'No se han podido cargar las publicaciones de instagram.'}
         </div>
     )
 }
