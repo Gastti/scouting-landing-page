@@ -16,7 +16,7 @@ export default function Footer() {
     return (
         <Section className='mt-10 py-10 bg-[#f2f2f2]'>
             <div className='flex flex-row justify-between w-full max-w-[1200px] flex-wrap gap-10'>
-                <div className='flex flex-row gap-3 items-center'>
+                <div className='flex flex-row gap-3 items-center select-none'>
                     <Image
                         src='/logo.png'
                         width={158}

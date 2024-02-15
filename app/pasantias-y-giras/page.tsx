@@ -14,7 +14,7 @@ export default function PasantiasGiras() {
                 <br /><br />
                 Muchas gracias por tu paciencia.
 
-                Atte. <b>El Equipo de Scouting.</b>
+                Atte. <b>Equipo Scouting.</b>
             </div>
             <RegisterButton />
         </main >

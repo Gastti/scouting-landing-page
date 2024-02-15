@@ -31,7 +31,7 @@ export default function Navbar() {
             <div
                 className='flex flex-row items-center justify-between gap-20 w-full max-w-[1200px] text-white rounded-full px-5 py-2'
             >
-                <Link href='/'>
+                <Link href='/' className='transition-transform duration-200 hover:scale-105'>
                     <Image
                         src='/logo.png'
                         alt='Logo de Scouting Consultoría y Gestión Deportiva'

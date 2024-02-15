@@ -15,7 +15,7 @@ export default function ServiceCard({ title, description, image, imageAlt, href 
     return (
         <Link
             href={href}
-            className='service-card flex flex-col justify-between items-start gap-3 basis-1 flex-grow bg-white min-w-[200px] md:min-w-[300px] border-slate-200 transition-colors duration-200 hover:bg-[#ffffff80] hover:outline outline-2 outline-white select-none rounded-md p-5'
+            className='service-card flex flex-col justify-between items-start gap-3 basis-1 flex-grow bg-white min-w-[200px] md:min-w-[300px] border-slate-200 transition-colors duration-200 hover:bg-[#ffffff80] select-none rounded-md p-5'
         >
             <div className='flex flex-col gap-3'>
                 <div
@@ -28,7 +28,9 @@ export default function ServiceCard({ title, description, image, imageAlt, href 
                         height={150}
                     />
                 </div>
-                <h3 className='text-[#28a5db] text-[1.5rem] md:text-[1.8rem] font-bold bg-gradient-to-r from-[#13cc3b] to-[#28a5db] text-transparent bg-clip-text'>{title}</h3>
+                <h3 className='text-[#28a5db] text-[1.5rem] md:text-[1.8rem] font-semibold bg-gradient-to-r from-[#13cc3b] to-[#28a5db] text-transparent bg-clip-text'>
+                    {title}
+                </h3>
                 {/* Descripcion desactivada hasta su elaboracion. */}
                 {/* <p>{description}</p> */}
             </div>

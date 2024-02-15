@@ -16,7 +16,7 @@ export default function Header() {
                         Desarrolla Tu Carrera con Nuestra Asesoría Deportiva
                     </h2>
                     <p className='text-[1rem] opacity-80'>
-                        Transforma tu pasión en logros tangibles con nosotros. <br />
+                        Transforma tu pasión en logros tangibles. <br />
                     </p>
 
                     {/* Llamada a la Acción / CTA */}
