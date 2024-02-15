@@ -16,7 +16,7 @@ export default function InstagramFeed() {
                 const posts = data.posts
                 setPosts(posts)
             }
-            
+
             setLoading(false)
 
         } catch (error) {
@@ -30,7 +30,7 @@ export default function InstagramFeed() {
     }, []);
     return (
         <div className='grid grid-cols-3 w-full max-w-[1120px] gap-1 md:gap-5'>
-            {/* {posts.map(post => (
+            {posts.map(post => (
                 <InstagramPost
                     key={post.code}
                     imageHeight={post.image.height}
@@ -38,7 +38,7 @@ export default function InstagramFeed() {
                     imageUrl={post.image.url}
                     code={post.code}
                 />
-            ))} */}
+            ))}
             {loading && (<>
                 <div className="col-span-1 aspect-square">
                     <div className="instagram-post-skeleton h-full bg-gray-200 flex items-center justify-center"></div>
