@@ -1,33 +1,25 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { Tweet, TweetSkeleton, TweetNotFound} from 'react-tweet';
+
+interface Response {
+    message: string;
+    lastCall: Date;
+    tweets: Array<string>;
+}
 
 export default function TwitterFeed() {
     const [tweets, setTweets] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const options = {
-        method: 'GET',
-        url: 'https://twitter154.p.rapidapi.com/user/tweets',
-        params: {
-            username: 'scouting_cygd',
-            limit: '5',
-            include_replies: false,
-            include_pinned: false
-        },
-        headers: {
-            'X-RapidAPI-Key': '5e86e64775mshd6f172431dd06acp1246bajsn140a99d9ce62',
-            'X-RapidAPI-Host': 'twitter154.p.rapidapi.com'
-        }
-    };
-
     const fetchTweets = async () => {
         try {
-            const response = await axios.request(options);
-            const data = response.data.results
-            const firstFiveIds = data.slice(0, 5).map((t: { tweet_id: any; }) => t.tweet_id);
-            setTweets(firstFiveIds)
+            const response = await fetch('/api/twitter')
+            if (response.ok) {
+                const data = await response.json()
+                const tweets = data.tweets
+                setTweets(tweets)
+            }
             setLoading(false)
 
         } catch (error) {

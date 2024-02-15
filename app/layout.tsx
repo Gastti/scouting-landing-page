@@ -25,6 +25,7 @@ export default function RootLayout({
         <NextTopLoader
           height={4}
           color='#13cc3b'
+          showSpinner={false}
         />
         <div className="hidden md:block"><Navbar /></div>
         <div className="block md:hidden z-20"><NavbarResponsive /></div>

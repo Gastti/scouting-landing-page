@@ -1,11 +1,8 @@
 'use client'
 import React, { useState, useRef, useEffect } from 'react'
-import { CSSTransition, SwitchTransition } from 'react-transition-group'
 import Section from '@/components/section/section'
 import SectionTitle from '@/components/sectiontitle/sectiontitle'
 import TestimonyCard from './testimonycard'
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const testimonials = [
     { name: 'Nombre Apellido 1', occupation: 'Ocupación de Ejemplo', review: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', image: '/testimonials/avatar_ph.png', imageAlt: 'Avatar del Cliente', rating: 3 },
@@ -45,19 +42,6 @@ export default function Testimonials() {
                 className='z-10 my-0 mb-10'
             />
                     <div className='flex flex-row flex-wrap gap-5 justify-center w-full max-w-[1200px] z-10'>
-                        {/* {testimonialsToShow.map(testimony => {
-                            return (
-                                <TestimonyCard
-                                    key={testimony.name}
-                                    name={testimony.name}
-                                    occupation={testimony.occupation}
-                                    image={testimony.image}
-                                    imageAlt={testimony.imageAlt}
-                                    review={testimony.review}
-                                    rating={testimony.rating}
-                                />
-                            )
-                        })} */}
                         {testimonials.map((testimony, index) => {
                             return (
                                 <TestimonyCard
