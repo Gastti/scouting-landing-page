@@ -16,7 +16,7 @@ export default function Header() {
                         Desarrolla Tu Carrera con Nuestra Asesoría Deportiva
                     </h2>
                     <p className='text-[1rem] opacity-80'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />
+                        Transforma tu pasión en logros tangibles con nosotros. <br />
                     </p>
 
                     {/* Llamada a la Acción / CTA */}

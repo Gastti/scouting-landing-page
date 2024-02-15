@@ -8,14 +8,14 @@ const RAPIDAPI_INSTAGRAM_KEY = process.env.RAPIDAPI_INSTAGRAM_KEY
 const RAPIDAPI_INSTAGRAM_HOST = process.env.RAPIDAPI_INSTAGRAM_HOST
 
 export interface InstagramPost {
-    image: InstagramImage,
-    code: ''
+    image: InstagramImage;
+    code: string;
 }
 
-export interface InstagramImage {
-    url: string;
+interface InstagramImage {
     width: number;
     height: number;
+    url: string;
 }
 
 const options = {
@@ -29,6 +29,35 @@ const options = {
         'X-RapidAPI-Host': RAPIDAPI_INSTAGRAM_HOST
     }
 };
+
+// Guardar imagenes
+async function downloadImageIfNotExists(url: string, filename: string): Promise<void> {
+    const imagePath = path.resolve('public', filename);
+
+    // Verificar si el archivo ya existe en la carpeta "public"
+    if (fs.existsSync(imagePath)) {
+        console.log(`La imagen "${filename}" ya existe en la carpeta "public", no se descargará.`);
+        return;
+    }
+
+    const response = await axios({
+        url,
+        method: 'GET',
+        responseType: 'stream'
+    });
+
+    response.data.pipe(fs.createWriteStream(imagePath));
+
+    return new Promise<void>((resolve, reject) => {
+        response.data.on('end', () => {
+            resolve();
+        });
+
+        response.data.on('error', (err: Error) => { // Aquí se especifica el tipo de 'err'
+            reject(err);
+        });
+    });
+}
 
 // Función para cargar los datos del archivo JSON
 function loadApiData(): { lastCall: Date, posts: InstagramPost[] } {
@@ -69,13 +98,24 @@ export async function GET() {
                 const response = await axios.request(options);
                 const data = await response.data
                 const getPosts = data.items.slice(0, 6);
+
+                // Descargar y guardar las imágenes si no existen en la carpeta "public"
+                await Promise.all(getPosts.map(async (item: any) => {
+                    const { image_versions2, code } = item;
+                    const imageUrl: string = image_versions2.candidates[3].url;
+                    const filename: string = `${code}.jpg`;
+
+                    // Descargar y guardar la imagen si no existe
+                    await downloadImageIfNotExists(imageUrl, filename);
+                }));
+
                 const mapedPosts: InstagramPost[] = getPosts.map((item: any) => {
                     const { image_versions2, code }: { image_versions2: any, code: string } = item;
-                    const image: InstagramImage = {
-                        url: image_versions2.candidates[0].url,
-                        width: image_versions2.candidates[0].width,
-                        height: image_versions2.candidates[0].height
-                    }
+                    const image = {
+                        width: image_versions2.candidates[3].width,
+                        height: image_versions2.candidates[3].height,
+                        url: `${code}.jpg`
+                    };
                     return { image, code };
                 });
 

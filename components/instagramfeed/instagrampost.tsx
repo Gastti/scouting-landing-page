@@ -12,13 +12,16 @@ export default function InstagramPost({ imageWidth, imageHeight, imageUrl, code 
     return (
         <a
             href={`https://instagram.com/p/${code}`}
-            className='aspect-square border-[1px]'
+            className='aspect-square border-[1px] overflow-hidden'
             target='_blank'
         >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
                 alt='Imagen de post de Instagram'
-                src={imageUrl}
+                src={`/${imageUrl}`}
+                width={imageWidth}
+                height={imageHeight}
+                className='object-cover h-full'
             />
         </a>
     )
