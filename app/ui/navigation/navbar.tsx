@@ -37,7 +37,7 @@ export default function Navbar() {
                         alt='Logo de Scouting Consultoría y Gestión Deportiva'
                         width={158}
                         height={191}
-                        className='h-[60px] w-[50px]'
+                        className='h-[60px] w-[50px] min-w-[50px]'
                     /></Link>
 
                 <div className='flex-row gap-5 items-center flex'>
