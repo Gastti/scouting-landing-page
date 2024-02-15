@@ -81,7 +81,8 @@ export async function GET() {
                 return NextResponse.json({
                     message: 'Error en el servidor.',
                     lastCall: apiData.lastCall,
-                    tweets: apiData.tweets
+                    tweets: apiData.tweets,
+                    error
                 })
             }
         }
