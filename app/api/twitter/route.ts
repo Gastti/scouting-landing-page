@@ -17,8 +17,8 @@ const options = {
         include_pinned: false
     },
     headers: {
-        'X-RapidAPI-Key': '254a6680eemsh1dcd935b539f5bep1af13cjsn3dfb187687c5',
-        'X-RapidAPI-Host': 'twitter154.p.rapidapi.com'
+        'X-RapidAPI-Key': RAPIDAPI_TWITTER_KEY,
+        'X-RapidAPI-Host': RAPIDAPI_TWITTER_HOST
     }
 };
 
