@@ -1,12 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { Tweet, TweetSkeleton, TweetNotFound} from 'react-tweet';
-
-interface Response {
-    message: string;
-    lastCall: Date;
-    tweets: Array<string>;
-}
+import { Tweet, TweetSkeleton, TweetNotFound } from 'react-tweet';
 
 export default function TwitterFeed() {
     const [tweets, setTweets] = useState([]);
@@ -21,7 +15,6 @@ export default function TwitterFeed() {
                 setTweets(tweets)
             }
 
-            console.log(response)
             setLoading(false)
 
         } catch (error) {
@@ -34,12 +27,12 @@ export default function TwitterFeed() {
         fetchTweets()
     }, []);
     return (
-            <div className='light flex flex-row flex-wrap max-w-[1200px] gap-5 justify-center'>
-                {tweets.map(tweet => (
-                    <Tweet key={tweet} id={tweet}/>
-                ))}
-                {loading && (<><TweetSkeleton /> <TweetSkeleton /> <TweetSkeleton /></>)}
-                {!loading && tweets.length == 0 && <TweetNotFound />}
-            </div>
+        <div className='light flex flex-row flex-wrap max-w-[1200px] gap-5 justify-center'>
+            {tweets.map(tweet => (
+                <Tweet key={tweet} id={tweet} />
+            ))}
+            {loading && (<><TweetSkeleton /> <TweetSkeleton /> <TweetSkeleton /></>)}
+            {!loading && tweets.length == 0 && <TweetNotFound />}
+        </div>
     )
 }

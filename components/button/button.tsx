@@ -14,7 +14,7 @@ export function Button({ children, variation, className, href = '/' }: ButtonPro
     return (
         <Link
             href={href}
-            className={`btn ${variation} ${className} text-[1rem] md:text-[1.5rem]`}
+            className={`btn ${variation} ${className} text-[1rem] md:text-[1.2rem]`}
         >
             <>
                 {children}
