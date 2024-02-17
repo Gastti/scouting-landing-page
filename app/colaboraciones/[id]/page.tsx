@@ -59,7 +59,7 @@ export default function Page() {
     }, [correctId])
 
     return (
-        <div className="flex flex-col w-full max-w-[1200px] mx-auto items-start px-5">
+        <div className="flex flex-col w-full max-w-[1200px] mx-auto items-start px-5 mt-20">
             <Image
                 src={activePartner.image}
                 width={150}
@@ -67,15 +67,17 @@ export default function Page() {
                 alt={activePartner.imageAlt}
                 className='mt-24 mx-auto'
             />
-            <h1 className='text-[2rem] sm:text-[3rem] font-semibold bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text'>
+            <h1 className='text-[2rem] mx-auto mb-12 sm:text-[3rem] font-semibold bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text'>
                 {activePartner.name}
             </h1>
 
             <div className="flex flex-col items-center justify-center gap-5">
                 <p className='text-justify'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.
-                    <br></br> <br></br>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.
+                    Nos encontramos trabajando en esta página para brindarte un mejor servicio y toda la información que necesitas.
+                    <br /><br />
+                    Muchas gracias por tu paciencia.
+
+                    Atte. <b>Equipo Scouting.</b>
                 </p>
             </div>
             <div className='mt-5'>
@@ -104,7 +106,7 @@ export default function Page() {
                         )
                     })}
                 </div>
-                Wd</div>
+            </div>
         </div>
     )
 }

@@ -47,7 +47,7 @@ export default function Partners() {
                     Ellos <b className='font-bold bg-gradient-to-r from-[#13cc3b] to-[#28a5db] text-transparent bg-clip-text text-center'>confían en nosotros</b>, conoce nuestras
                 </div>
                 <div className='flex justify-center mt-5'>
-                    <Button href='/colaboraciones/racing' variation='goto' className=''>
+                    <Button href='/colaboraciones/racing' variation='goto' className='transition-transform duration-200 active:scale-95'>
                         Colaboraciones
                     </Button>
                 </div>

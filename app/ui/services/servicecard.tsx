@@ -15,7 +15,7 @@ export default function ServiceCard({ title, description, image, imageAlt, href 
     return (
         <Link
             href={href}
-            className='service-card flex flex-col justify-between items-start gap-3 basis-1 flex-grow bg-white min-w-[200px] md:min-w-[300px] border-slate-200 transition-colors duration-200 hover:bg-[#ffffff80] select-none rounded-md p-5'
+            className='service-card flex flex-col justify-between items-start gap-3 basis-1 flex-grow bg-white min-w-[200px] md:min-w-[300px] border-slate-200 transition-all duration-200 hover:bg-[#ffffff80] select-none rounded-md p-5 active:scale-95'
         >
             <div className='flex flex-col gap-3'>
                 <div

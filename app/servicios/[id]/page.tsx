@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import * as DOMPurify from 'dompurify';
+import * as dompurify from 'dompurify';
 import Image from 'next/image';
 import RegisterButton from '@/components/registerbutton/registerbutton';
 
@@ -90,7 +90,7 @@ export default function Page() {
     const correctId = servicesId[pathname] | 0
 
     const sanitizedContent = (content: string) => {
-        const htmlSanitized = DOMPurify.sanitize(content);
+        const htmlSanitized = dompurify.sanitize(content);
 
         return (
             <div dangerouslySetInnerHTML={{ __html: htmlSanitized }} />
