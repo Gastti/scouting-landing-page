@@ -2,7 +2,7 @@
     background-color: #09c732;
     padding: 0.8rem 2rem;
     color: #fff;
-    font-weight: 500;
+    font-weight: 400;
     transition: all .1s;
 }
 
@@ -18,21 +18,30 @@
     background-color: #1eb2f2;
 }
 
-.btn.goto {
+.btn.goto,
+.btn.backto {
     display: flex;
     align-items: center;
     gap: 1rem;
     padding: 1rem 3rem;
     padding-right: 3rem;
-    background: rgb(19,204,59);
-    background: -moz-linear-gradient(45deg, rgba(19,204,59,1) 0%, rgba(40,165,219,1) 100%);
-    background: -webkit-linear-gradient(45deg, rgba(19,204,59,1) 0%, rgba(40,165,219,1) 100%);
-    background: linear-gradient(45deg, rgba(19,204,59,1) 0%, rgba(40,165,219,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#13cc3b",endColorstr="#28a5db",GradientType=1);
-    border-radius: 25px;
+    background: rgb(19, 204, 59);
+    background: -moz-linear-gradient(45deg, rgba(19, 204, 59, 1) 0%, rgba(40, 165, 219, 1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(19, 204, 59, 1) 0%, rgba(40, 165, 219, 1) 100%);
+    background: linear-gradient(45deg, rgba(19, 204, 59, 1) 0%, rgba(40, 165, 219, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#13cc3b", endColorstr="#28a5db", GradientType=1);
+    border-radius: 0.5rem;
 }
 
+.btn.backto {
+    padding-left: 3rem;
+}
+
+
 .btn.goto:hover {
-    background-color: #28aae1;
     gap: 2rem;
+}
+
+.btn.backto:hover {
+    padding-left: 1.5rem;
 }

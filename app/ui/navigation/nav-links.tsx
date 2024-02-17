@@ -29,8 +29,8 @@ export default function NavLinks({isFixed, isHome, className}: NavLinksProps) {
                         key={link.name}
                         href={link.href}
                         className={
-                            `flex px-6 py-2 grow items-center justify-center rounded-full font-normal hover:bg-gradient-to-r from-[#13cc3b] to-[#28a5db] hover:text-transparent bg-clip-text
-                            ${isFixed && pathname !== link.href || !isHome && pathname!== link.href ? 'text-black' : !isFixed && pathname !== link.href ? 'text-white' : ''} ${pathname === link.href ? 'font-bold bg-gradient-to-r from-[#13cc3b] to-[#28a5db] text-transparent' : null} ${className}`
+                            `flex px-6 py-2 grow items-center justify-center rounded-full hover:bg-gradient-to-r from-[#13cc3b] to-[#28a5db] hover:text-transparent bg-clip-text
+                            ${isFixed && pathname !== link.href || !isHome && pathname!== link.href ? 'text-black' : !isFixed && pathname !== link.href ? 'text-white' : ''} ${pathname === link.href ? 'bg-gradient-to-r from-[#13cc3b] to-[#28a5db] text-transparent font-bold' : null} ${className}`
                         }
                     >
                         {link.name}

@@ -28,7 +28,7 @@ export default function Testimonials() {
         setTimeout(() => {
           setCurrentTestimonials((prevState) => prevState === testimonials.length - 2 ? 0 : prevState + 1)
         }, 0)
-      }, 3000)
+      }, 1000000)
     
       return () => clearInterval(interval)
     }, [])

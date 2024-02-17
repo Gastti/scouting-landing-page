@@ -7,8 +7,8 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import Link from 'next/link';
 
 const socials = [
-    { name: 'Instagram', icon: <InstagramIcon sx={{ fontSize: '2rem', color: '#fff' }} />, href: 'https://www.instagram.com/scouting_cygd' },
-    { name: 'X', icon: <XIcon sx={{ fontSize: '2rem', color: '#fff' }} />, href: 'https://x.com/scouting_cygd' },
+    { name: 'Instagram', icon: <InstagramIcon sx={{ fontSize: '1.5rem', color: '#fff' }} />, href: 'https://www.instagram.com/scouting_cygd' },
+    { name: 'X', icon: <XIcon sx={{ fontSize: '1.5rem', color: '#fff' }} />, href: 'https://x.com/scouting_cygd' },
     // { name: 'Facebook', icon: <FacebookIcon sx={{ fontSize: '2.5rem', color: '#13cc3b' }} />, href: 'https://facebook.com/' }
 ]
 
@@ -43,7 +43,7 @@ export default function Footer() {
                                     key={social.name}
                                     href={social.href}
                                     target='_blank'
-                                    className='flex items-center justify-center transition-all duration-200 hover:scale-110 p-1.5 bg-gradient-to-r from-[#28a5db] to-[#13cc3b] rounded-full'
+                                    className='flex items-center justify-center transition-all duration-200 hover:scale-110 p-1 bg-gradient-to-r from-[#28a5db] to-[#13cc3b] rounded-lg'
                                 >
                                     {social.icon}
                                 </a>

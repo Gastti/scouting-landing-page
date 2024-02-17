@@ -44,21 +44,27 @@ export default function NavbarResponsive() {
                     <div className='flex flex-col gap-5 items-start'>
                         <NavLinks className='text-[1rem] grow-0' />
                     </div>
-                    <div className='flex flex-row gap-3 items-center px-6'>
-                        <Link href='/'>
-                            <Image
-                                src='/logo.png'
-                                width={158}
-                                height={191}
-                                alt='Logo Scouting'
-                                className=' h-[60px] w-[50px]'
-                            />
-                        </Link>
-                        <h3>
-                            <span className='text-[1.5rem] leading-tight bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text font-semibold'>Scouting</span>
-                            <br></br>
-                            <span>Consultoria y Gestion Deportiva</span>
-                        </h3>
+                    <div>
+                        <div className='flex flex-col'>
+                            <a className='pl-6 p' href='https://www.instagram.com/scouting_cygd/'>Instagram</a>
+                            <a className='pl-6' href='https://www.instagram.com/scouting_cygd/'>Twitter</a>
+                        </div>
+                        <div className='flex flex-row gap-3 items-center px-6'>
+                            <Link href='/'>
+                                <Image
+                                    src='/logo.png'
+                                    width={158}
+                                    height={191}
+                                    alt='Logo Scouting'
+                                    className=' h-[60px] w-[50px]'
+                                />
+                            </Link>
+                            <h3>
+                                <span className='text-[1.5rem] leading-tight bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text font-semibold'>Scouting</span>
+                                <br></br>
+                                <span>Consultoria y Gestion Deportiva</span>
+                            </h3>
+                        </div>
                     </div>
                 </div>
             </CSSTransition>

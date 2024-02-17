@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import AddIcon from '@mui/icons-material/Add';
+import * as DOMPurify from 'dompurify';
 import Image from 'next/image';
 import RegisterButton from '@/components/registerbutton/registerbutton';
 
@@ -34,70 +34,49 @@ const servicesId: ServiceKVM = {
 const services: Array<Service> = [
     {
         title: 'Servicios de Consultoría',
-        content: `
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.
-      
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.`,
+        content: `<div>Nos encontramos trabajando en esta página para brindarte un mejor servicio y toda la información que necesitas. <br /><br />Muchas gracias por tu paciencia.<br /><br /> Atte. <b>Equipo Scouting.</b></div>`,
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/servicios/consultoria',
         banner: '/services_banner_ph.png', bannerAlt: 'Banner de Servicio'
     },
     {
         title: 'Formación Profesional',
-        content: `
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.
-      
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.`,
+        content: `<div>Nos encontramos trabajando en esta página para brindarte un mejor servicio y toda la información que necesitas. <br /><br />Muchas gracias por tu paciencia.<br /><br /> Atte. <b>Equipo Scouting.</b></div>`,
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/servicios/formacion',
         banner: '/services_banner_ph.png', bannerAlt: 'Banner de Servicio'
     },
     {
         title: 'Ligas Deportivas',
-        content: `
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.
-      
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.`,
+        content: `<div>Nos encontramos trabajando en esta página para brindarte un mejor servicio y toda la información que necesitas. <br /><br />Muchas gracias por tu paciencia.<br /><br /> Atte. <b>Equipo Scouting.</b></div>`,
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/servicios/ligas-deportivas',
         banner: '/services_banner_ph.png', bannerAlt: 'Banner de Servicio'
     },
     {
         title: 'Organización de Eventos Deportivos',
-        content: `
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.
-      
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.`,
+        content: `<div>Nos encontramos trabajando en esta página para brindarte un mejor servicio y toda la información que necesitas. <br /><br />Muchas gracias por tu paciencia.<br /><br /> Atte. <b>Equipo Scouting.</b></div>`,
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/servicios/eventos-deportivos',
         banner: '/services_banner_ph.png', bannerAlt: 'Banner de Servicio'
     },
     {
         title: 'Asesoramiento a Deportistas',
-        content: `
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.
-      
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.`,
+        content: `<div>Nos encontramos trabajando en esta página para brindarte un mejor servicio y toda la información que necesitas. <br /><br />Muchas gracias por tu paciencia.<br /><br /> Atte. <b>Equipo Scouting.</b></div>`,
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/servicios/asesoramiento',
         banner: '/services_banner_ph.png', bannerAlt: 'Banner de Servicio'
     },
     {
         title: 'Scouting Social',
-        content: `
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.
-      
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.`,
+        content: `<div>Nos encontramos trabajando en esta página para brindarte un mejor servicio y toda la información que necesitas. <br /><br />Muchas gracias por tu paciencia.<br /><br /> Atte. <b>Equipo Scouting.</b></div>`,
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/servicios/scouting-social',
         banner: '/services_banner_ph.png', bannerAlt: 'Banner de Servicio'
     },
     {
         title: 'Organización de Torneos Empresariales',
-        content: `
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.
-      
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum velit euismod in pellentesque. Molestie nunc non blandit massa enim. Tempor commodo ullamcorper a lacus. Id interdum velit laoreet id donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eget aliquet nibh praesent tristique magna sit amet. Mollis nunc sed id semper risus in hendrerit gravida rutrum.`,
+        content: `<div>Nos encontramos trabajando en esta página para brindarte un mejor servicio y toda la información que necesitas. <br /><br />Muchas gracias por tu paciencia.<br /><br /> Atte. <b>Equipo Scouting.</b></div>`,
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         image: '/service_icon_ph.png', imageAlt: 'Icono de Servicio', href: '/servicios/torneos-empresariales',
         banner: '/services_banner_ph.png', bannerAlt: 'Banner de Servicio'
@@ -110,13 +89,21 @@ export default function Page() {
     const pathname = usePathname();
     const correctId = servicesId[pathname] | 0
 
+    const sanitizedContent = (content: string) => {
+        const htmlSanitized = DOMPurify.sanitize(content);
+
+        return (
+            <div dangerouslySetInnerHTML={{ __html: htmlSanitized }} />
+        );
+    };
+
     useEffect(() => {
         setActiveService(services[correctId])
     }, [correctId])
 
     return (
         <div className="flex flex-col w-full max-w-[1200px] mx-auto px-5">
-            <div className='mt-24 mx-auto my-5 text-center'>
+            <div className='mt-36 mx-auto my-5 text-center'>
                 <h2 className='text-[1rem] sm:text-[2rem] font-semibold text-center leading-tight'>Scouting</h2>
                 <h1 className='text-[1.5rem] sm:text-[3.5rem] font-semibold leading-tight bg-gradient-to-r from-[#28a5db] to-[#13cc3b] text-transparent bg-clip-text'>
                     {activeService.title}
@@ -125,7 +112,7 @@ export default function Page() {
             <div className="flex flex-row gap-5 flex-wrap md:flex-nowrap">
                 <div className='flex flex-col gap-5'>
                     <p className='text-justify'>
-                        {activeService.content}
+                        {sanitizedContent(activeService.content)}
                     </p>
                     <RegisterButton />
                 </div>

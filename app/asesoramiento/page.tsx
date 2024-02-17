@@ -9,7 +9,7 @@ export default function Asesoramiento() {
                     Asesoramiento
                 </h1>
             </div>
-            <div className="z-10">
+            <div>
                 Nos encontramos trabajando en esta página para brindarte un mejor servicio y toda la información que necesitas.
                 <br /><br />
                 Muchas gracias por tu paciencia.

@@ -6,6 +6,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-smooth: auto;
 }
 
 :root {
@@ -153,4 +154,30 @@ body {
   width: 4px;
   left: 0;
   top: 0;
+}
+
+.cta-button:hover > svg {
+  animation: bounce .5s;
+}
+
+@keyframes cta-animation {
+  0% {
+    transform: translateY(-20);
+  }
+
+  100% {
+    transform: translateY(20);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
 }

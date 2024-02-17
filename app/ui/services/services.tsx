@@ -1,5 +1,5 @@
 import SectionTitle from '@/components/sectiontitle/sectiontitle'
-import React from 'react'
+import React, { forwardRef } from 'react';
 import ServiceCard from './servicecard'
 import Section from '@/components/section/section'
 import Image from 'next/image'
@@ -42,35 +42,45 @@ const services = [
     }
 ]
 
-export default function Services() {
+interface ServicesProps {
+    // Props del componente, si tiene alguna
+    ref: React.Ref<HTMLDivElement>;
+}
+
+const Services = ({ ref }: ServicesProps) => {
+
     return (
-        <Section id="services" className='relative mb-40'>
-            <SectionTitle
-                title='Nuestros Servicios'
-                subtitle='Potencia tu rendimiento con'
-                className='z-10'
-            />
-            <div className='flex flex-row justify-center gap-5 max-w-[1200px] flex-wrap w-full z-10'>
-                {services.map(service => {
-                    return (
-                        <ServiceCard
-                            key={service.title}
-                            title={service.title}
-                            description={service.description}
-                            image={service.image}
-                            imageAlt={service.imageAlt}
-                            href={service.href}
-                        />
-                    )
-                })}
-            </div>
-            <Image
+        <div ref={ref}>
+            <Section id="services" className='relative mb-40 mt-10'>
+                <SectionTitle
+                    title='Nuestros Servicios'
+                    subtitle='Potencia tu rendimiento con'
+                    className='z-10'
+                />
+                <div className='flex flex-row justify-center gap-5 max-w-[1200px] flex-wrap w-full h-full z-10'>
+                    {services.map(service => {
+                        return (
+                            <ServiceCard
+                                key={service.title}
+                                title={service.title}
+                                description={service.description}
+                                image={service.image}
+                                imageAlt={service.imageAlt}
+                                href={service.href}
+                            />
+                        )
+                    })}
+                </div>
+                {/* <Image
                 src='/bg_g_1.png'
                 alt='Fondo Degradado'
                 width={1920}
                 height={1080}
                 className='absolute top-0 opacity-50 z-0 w-full h-full object-cover'
-            />
-        </Section>
+            /> */}
+            </Section>
+        </div>
     )
 }
+
+export default forwardRef(Services);
